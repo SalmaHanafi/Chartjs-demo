@@ -1,3 +1,16 @@
-var myChart = document.getElementById("myChart").getContext("2d");
+let myChart = document.getElementById('myChart').getContext('2d');
 
-var questionsChart = new Chart(myChart);
+let questionsChart = new Chart(myChart, {
+    type: 'pie',
+    data: {
+        labels: ['Numbering Systems', 'Classes', 'Objects', 'Methods'],
+        datasets: [
+            {
+                label: 'Questions',
+                data: [10, 2, 6, 3],
+                backgroundColor: ['green', 'red', 'blue', 'orange']
+
+            }]
+    },
+    options: {}
+});
