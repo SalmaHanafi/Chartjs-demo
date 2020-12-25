@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <script>
+        var url_string = window.location.href 
+        var url = new URL (url_string)
+
+        var socialMedia = url.searchParams.get("socialmedia");
+        var users = url.searchParams.get("users");
+
+
+        window.onload = function(){
+            document.getElementById("social").innerHTML = socialMedia
+            document.getElementById("users").innerHTML = "The number of users " + users
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2 id="social"></h2>
+    <p id = "users"></p>
+</body>
+</html>
